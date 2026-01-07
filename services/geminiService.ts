@@ -3,10 +3,17 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { SiteAnalysis } from "../types";
 
 export class GeminiService {
-  private ai: GoogleGenAI;
+  private _ai: GoogleGenAI | null = null;
 
-  constructor() {
-    this.ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+  private get ai(): GoogleGenAI {
+    if (!this._ai) {
+      const apiKey = process.env.API_KEY;
+      if (!apiKey) {
+        throw new Error("API Key not found in process.env.API_KEY. Intelligence functions will be unavailable.");
+      }
+      this._ai = new GoogleGenAI({ apiKey });
+    }
+    return this._ai;
   }
 
   async analyzeWebsite(url: string): Promise<SiteAnalysis> {
