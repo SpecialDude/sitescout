@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiteScout AI - Website Recon & Analysis</title>
+    <title>SiteScout AI | Deep Website Intelligence & Requirements Mapping</title>
+    <meta name="description" content="Reverse-engineer any website's architecture, business logic, and technical requirements with AI-powered deep crawling.">
+    <meta property="og:title" content="SiteScout AI - Website Recon & Analysis">
+    <meta property="og:description" content="Map out site structures and requirements in seconds with Gemini 3 Pro.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -19,7 +25,7 @@
         }
 
         @media print {
-            .no-print, header, footer, button, .ChatInterface_wrapper, [role="status"] {
+            .no-print, header, footer, button, .ChatInterface_wrapper, [role="status"], form {
                 display: none !important;
             }
             body {
@@ -31,10 +37,10 @@
             .bg-slate-900, .bg-slate-950, .bg-slate-800, .bg-slate-900\/50 {
                 background-color: white !important;
                 background: none !important;
-                border-color: #e2e8f0 !important;
+                border: 1px solid #e2e8f0 !important;
             }
             .text-slate-100, .text-slate-200, .text-slate-300, .text-slate-400, .text-slate-500 {
-                color: black !important;
+                color: #1e293b !important;
             }
             .text-indigo-400, .text-emerald-400, .text-blue-400, .text-purple-400 {
                 color: #4f46e5 !important;
@@ -45,16 +51,13 @@
             }
             main {
                 max-width: 100% !important;
-                padding: 0 !important;
+                padding: 1cm !important;
             }
             .rounded-2xl, .rounded-xl {
-                border-radius: 4px !important;
+                border-radius: 8px !important;
             }
             .shadow-lg, .shadow-2xl, .shadow-indigo-500\/20 {
                 box-shadow: none !important;
-            }
-            .lg\:col-span-2 {
-                grid-column: span 3 / span 3 !important;
             }
             section {
                 break-inside: avoid;
@@ -73,7 +76,7 @@
 }
 </script>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen">
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-indigo-500 selection:text-white">
     <div id="root"></div>
 </body>
 </html>

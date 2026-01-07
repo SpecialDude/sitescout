@@ -1,6 +1,6 @@
 {
   "name": "SiteScout AI",
-  "description": "An advanced website crawler and analyst that uses Gemini to map out site structures, requirements, and business logic.",
+  "description": "Professional-grade website analysis tool. Deep-crawls domains to reverse-engineer site architecture, business logic, and functional requirements using Gemini 3 Intelligence.",
   "requestFramePermissions": [
     "geolocation"
   ]
